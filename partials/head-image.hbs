@@ -17,7 +17,7 @@
                 {{#if tag.description}}
                     {{tag.description}}
                 {{else}}
-                    A {{pagination.total}}-post collection
+                    {{tag.name}}
                 {{/if}}
             </h5>
         </div>
@@ -32,7 +32,7 @@
             <h1>{{post.title}}</h1>
             {{^if post.page}}
             <h5>
-                <time datetime="{{date format='YYYY-MM-DD'}}"><span class="mega-octicon octicon-calendar"></span> {{date format="YYYY-MM-DD"}} at {{date format="HH:mm"}}</time>
+                <time datetime="{{date format='YYYY-MM-DD'}}"><span class="mega-octicon octicon-calendar"></span> {{date format="YYYY-MM-DD HH:mm:ss"}}</time>
             </h5>
             {{/if}}
             {{#foreach post.tags}}
