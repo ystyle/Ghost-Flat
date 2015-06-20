@@ -2,6 +2,12 @@ section.posts {
     margin-top: 2em;
 }
 
+section.posts  img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+}
+
 h1 {
     color: #4FC1E9;
 }

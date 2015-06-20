@@ -17,6 +17,9 @@
         radioClass: 'iradio_flat',
         increaseArea: '20%'
     });
+    $('section.posts a[href^="http"]').each(function(){
+      $(this).attr('target', '_blank');
+    });
     //$('#accordion1').collapse();
     //$('#accordion2').collapse();
   })
