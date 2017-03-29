@@ -27,11 +27,15 @@
             <div>
                 <h1 class="fade">温馨提示：您访问的地址不存在！</h1>
                 <p class="fade">你正在寻找的页面无法找到。<br><hr>
-                <a id="go" style="opacity: 1;" class="link" href="http://ystyle.top/">你寻找的页面可以在这里：http://ystyle.top</a></p>
+                    <a style="opacity: 1;" class="link" href="http://ystyle.top/">你寻找的页面可以在这里：http://ystyle.top</a>
+                    <br>
+                    <a id="go" style="opacity: 1;" class="link" href="http://ystyle.top/">或者尝试访问：<p id="link">http://ystyle.top</p></a>
+                </p>
             </div>
         </div>
         <script type="text/javascript">
             document.querySelector("#go").href="http://ystyle.top"+location.pathname
+            document.querySelector("#link").innerText="http://ystyle.top"+location.pathname
         </script>
     </body>
 </html>
