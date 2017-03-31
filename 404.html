@@ -39,7 +39,7 @@
             var target = "http://ystyle.top"+location.pathname
             document.querySelector("#go").href = target
             document.querySelector("#go").innerText = target
-            
+
             setTimeout(function () {
                 location.href = target
             }, GetRandomNum(500,3000));
@@ -52,7 +52,7 @@
 
             Notification.requestPermission(function (result) {
                 if (result != 'denied') {
-                    var notification = new Notification("正在尝试跳转目录文章链接!", {
+                    var notification = new Notification("正在尝试跳转目标文章链接!", {
                         body:target,
                         icon:'https://avatars2.githubusercontent.com/u/4478635?v=3&s=460',
                     })
