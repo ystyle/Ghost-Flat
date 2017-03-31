@@ -35,11 +35,33 @@
             </div>
         </div>
         <script type="text/javascript">
-            document.querySelector("#go").href="http://ystyle.top"+location.pathname
-            document.querySelector("#go").innerText="http://ystyle.top"+location.pathname
-            setTimeout(function () {
 
-            }, 10);
+            var target = "http://ystyle.top"+location.pathname
+            document.querySelector("#go").href = target
+            document.querySelector("#go").innerText = target
+            
+            setTimeout(function () {
+                location.href = target
+            }, GetRandomNum(500,3000));
+
+            function GetRandomNum(Min,Max){
+                var Range = Max - Min;
+                var Rand = Math.random();
+                return(Min + Math.round(Rand * Range));
+            }
+
+            Notification.requestPermission(function (result) {
+                if (result != 'denied') {
+                    var notification = new Notification("正在尝试跳转目录文章链接!", {
+                        body:target,
+                        icon:'https://avatars2.githubusercontent.com/u/4478635?v=3&s=460',
+                    })
+                    notification.onclick = function() {
+                        notification.close()
+                    }
+                }
+            });
+
             var _hmt = _hmt || [];
         </script>
         <script async src="//hm.baidu.com/hm.js?72f01a549fa8662c1963791e5b961383"></script>
